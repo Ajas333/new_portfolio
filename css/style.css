@@ -979,11 +979,11 @@ a, a:hover {
 .portfolio-item .overlay, .blog-item .overlay {
   position: relative;
   z-index: 8;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
+  opacity: 1; /* Set opacity to 1 to make it visible */
+  visibility: visible; /* Make it visible by default */
+  -webkit-transition: none; /* Disable transition for always visible */
+  -o-transition: none;
+  transition: none;
 }
 
 .portfolio-item .overlay, .portfolio-item .overlay:before, .blog-item .overlay, .blog-item .overlay:before {
@@ -995,7 +995,7 @@ a, a:hover {
 }
 
 .portfolio-item .overlay:before, .blog-item .overlay:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2); /* Keep the background overlay */
   content: "";
 }
 
@@ -1011,6 +1011,7 @@ a, a:hover {
   bottom: 20px;
   left: 20px;
   right: 20px;
+  color: white; /* Ensure text remains visible */
 }
 
 .portfolio-item .portfolio-item-content h3, .portfolio-item .portfolio-item-content p, .blog-item .portfolio-item-content h3, .blog-item .portfolio-item-content p {
